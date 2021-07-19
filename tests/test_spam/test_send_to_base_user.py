@@ -22,5 +22,9 @@ def test_send_spam(session, users):
         session.save(user)
     email = SendEmail()
     sender_spam = SenderSpam(session, email)
-    sender_spam.send_email('')
+    sender_spam.send_email(
+        'remetente@teste.com',
+        'assunto do email',
+        'corpo do email (mensagem do email)',
+    )
     assert len(users) == email.qtd_email_sent
