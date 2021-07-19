@@ -12,7 +12,6 @@ class SendEmail:
     def qtd_email_sent(self, value: int) -> None:
         self.__qtd_email_sent = value
 
-    @staticmethod
     def send(self, sender: str, to: str, subject_matter: str, body: str) -> str:
         """ Função estatic*
         Enviar email (quem vai enviar/ para quem vai enviar/ assunto / mensagem)
